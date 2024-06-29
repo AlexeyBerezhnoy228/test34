@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Box icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Product</title>
+</head>
+
+<body>
+    <div class="navigation" style="background: linear-gradient(205deg, #ebffcd, #317011);">
+        <div class="nav-center container d-flex">
+            <a href="index.html" class="logo">
+                <h1>Логотип</h1>
+            </a>
+
+            <ul class="nav-list d-flex">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Дом</a>
+                </li>
+                <li class="nav-item">
+                    <a href="product.html" class="nav-link">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#FAQ" class="nav-link">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Контакт</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <i class="bx bx-menu-alt-left"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Products -->
+    <section class="section all-products">
+        <div class="top container">
+            <h1>Все товары</h1>
+            <form>
+                <select id="sortSelect">
+                    <option value="1">По умолчанию</option>
+                    <option value="2">По возрастанию цены</option>
+                    <option value="3">По убыванию цены</option>
+                </select>
+                <span id="sortIcon">
+                    <i class="bx bx-chevron-down"></i>
+                </span>
+            </form>
+        </div>
+
+        <div class="product-center container" id="card__product_pos"></div>
+    </section>
+
+    <template id="card__product_pattern">
+        <section class="product-item">
+            <div class="product-thumb" id="section">
+                <div class="overlay">
+                    <img src="" alt="" />
+                    <span id="discount"></span>
+                </div>
+            </div>
+            <div class="product-info">
+                <span id="catalog"></span>
+                <a id="name" style="cursor: pointer;"></a>
+                <h4 id="h4"></h4>
+            </div>
+        </section>
+    </template>
+
+    <script>
+        const user__location = "product"
+    </script>
+
+    <section class="pagination">
+        <div class="container">
+            <span id="spanMoveRemove" style="transform: scale(-1, 1) "><i class="bx bx-right-arrow-alt"></i></span>
+            <span id="span1" style="background: rgba(33, 214, 33, 0.6);"></span> <span id="span2"></span> <span id="span3"></span> <span id="span4"></span>
+            <span id="spanMove"><i class="bx bx-right-arrow-alt"></i></span>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="row">
+            <div class="col d-flex">
+                <h4>INFORMATION</h4>
+                <a href="#">About us</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col d-flex">
+                <h4>USEFUL LINKS</h4>
+                <a href="#">Online Store</a>
+            </div>
+            <div class="col d-flex">
+                <span><i class='bx bxl-facebook-square'></i></span>
+                <span><i class='bx bxl-instagram-alt' ></i></span>
+                <span><i class='bx bxl-github' ></i></span>
+                <span><i class='bx bxl-twitter' ></i></span>
+                <span><i class='bx bxl-pinterest' ></i></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="./js/database.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
